@@ -16,12 +16,48 @@
 }
 
 body {
-    background: url('images/image.jpg') rgba(0,0,0, 0.6);
-    background-blend-mode: multiply;
+    background: linear-gradient(to bottom, #000 0%, #232b2b 100%);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    background-repeat: no-repeat;
+    scroll-behavior: smooth;
 }
+
+a {
+    text-decoration: none;
+    color: var(--color-body);
+    transition: all 0.4s ease;
+}
+
+a:hover {
+    color: var(--color-brand);
+}
+
+.nav-custom {
+    font-weight: 500;
+    position: relative;
+}
+
+.nav-custom::after {
+    content: "";
+    width: 0%;
+    height: 2px;
+    background-color: var(--color-brand);
+    position: absolute;
+    left: 0;
+    top: 110%;
+    transition: all 0.4s;
+}
+
+.nav-custom:hover::after {
+    width: 100%;
+}
+
+.nav-custom.active {
+    color: var(--color-brand); 
+}
+
 
 @media(max-width: 991px) {
     .sidebar{
@@ -30,7 +66,9 @@ body {
     }
 }
 
-
+#portfolio {
+    padding-bottom: 100px;
+}
 
 .bg-base {
     background-color: var(--color-base);
@@ -44,20 +82,28 @@ body {
     box-shadow: -6px 6px 0 0 var(--color-brand);
 }
 
+.card-custom .card-custom-image {
+    overflow: hidden;
+    /* Set a specific height or keep it responsive with padding-top trick */
+    height: 200px;
+    position: relative;
+    width: 100%; /* This will make sure the image container is fully responsive */
+}
+
+.card-custom .card-custom-image img {
+    width: 100%;
+    height: 100%; /* Ensure the image covers the full container */
+    object-fit: cover; /* This will cover the area, cropping the image as necessary */
+    transition: transform 0.4s ease;
+}
+
 .card-custom:hover .card-custom-image img {
     transform: scale(1.1);
 }
 
-.card-custom .card-custom-image img {
-    transition: all 0.4s ease;
-}
-
-.card-custom .card-custom-image {
-    overflow: hidden;
-}
-
-.link-custom:hover::after {
-    width: 100%;
+.link-custom {
+    font-weight: 700;
+    position: relative;
 }
 
 .link-custom::after {
@@ -71,7 +117,16 @@ body {
     transition: all 0.4s;
 }
 
-.link-custom {
-    font-weight: 700;
-    position: relative;
+.link-custom:hover::after {
+    width: 100%;
 }
+
+.text-brand {
+    color: white;
+}
+
+.text-brand + h1 {
+    color: var(--color-brand);
+}
+
+

@@ -11,12 +11,10 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     <title>Parv Choksi</title>
   </head>
-  <body class="vh-100 overflow-hidden">
+  <body class="vh-100">
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-transparent">
       <div class="container">
-        <!-- Logo -->
-        <a class="navbar-brand fs-4" href="#">Parv Choksi</a>
         <!-- Toggle Button -->
         <button class="navbar-toggler shadow-none border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -35,34 +33,27 @@
           <div class="offcanvas-body d-flex flex-column flex-lg-row p-4 p-lg-0">
             <ul class="navbar-nav justify-content-center align-items-center fs-5 flex-grow-1 pe-3">
               <li class="nav-item mx-2">
-                <a class="nav-link" aria-current="page" href="index.html">Home</a>
+                <a href="index.html" class="nav-custom">Home</a>
               </li>
               <li class="nav-item mx-2">
-                <a class="nav-link active" href="#">Portfolio</a>
+                <a href="#" class="nav-custom active">Portfolio</a>
               </li>
               <li class="nav-item mx-2">
-                <a class="nav-link" href="blog.html">Blog</a>
+                <a href="blog.html" class="nav-custom">Blog</a>
               </li>
             </ul>
-            
-            <!--Login-->
-            <div class="d-flex flex-column flex-lg-row justify-content-center align-items-center gap-3">
-              <a href="#login" class="text-white text-decoration-none px-3 py-1 rounded-4"
-              >Login</a>
-            </div>
           </div>
         </div>
       </div>
     </nav>
 
     <main>
-        <section id="portfolio" class="full-height px-lg-5">
+        <section id="portfolio" class="full-height px-lg-5 w-100 vh-100 d-flex flex-column p-5 align-items-center">
             <div class="container">
-
                 <div class="row pb-4" data-aos="fade-up">
                     <div class="col-lg-8">
                         <h6 class="text-brand">PORTFOLIO</h6>
-                        <h1>My Recent Projects</h1>
+                        <h1>My Projects</h1>
                     </div>
                 </div>
 
@@ -125,7 +116,10 @@
         </section>
         
     </main>
-      
+    
+    <footer>
+      testing
+    </footer>
     
   </body>
 </html>
