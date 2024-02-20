@@ -6,13 +6,12 @@
     --color-base2: #022a30;
     --color-brand: #e0f780;
     --color-brand2: #deff58;
-    --sidbar-width: 240px;
     --font-base: "Bai Jamjuree";
 }
 
 * {
-    font-family: "Fira Sans", sans-serif;
     font-weight: lighter;
+    font-family: var(--font-base);
 }
 
 body {
@@ -122,7 +121,7 @@ a:hover {
 }
 
 .text-brand {
-    color: white;
+    color: var(--color-heading)
 }
 
 .text-brand + h1 {
