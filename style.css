@@ -67,6 +67,23 @@ a:hover {
     }
 }
 
+.homepage-landing-text h5 {
+    color: var(--color-heading);
+    font-weight: 300;
+}
+
+.homepage-landing-text .fa {
+    transition: all 0.4s ease;
+    font-size: 36px;
+    color: var(--color-brand3);
+    margin-right: 10px;
+}
+
+.homepage-landing-text .fa:hover {
+    color: rgb(0, 200, 52, 0.5);;
+}
+
+
 #portfolio, #blog {
     padding-bottom: 100px;
     height: auto;
