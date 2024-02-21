@@ -52,7 +52,7 @@ a:hover {
 }
 
 .nav-custom:hover::after {
-    width: 100%;
+    width: 100%;    
 }
 
 .nav-custom.active {
