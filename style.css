@@ -144,6 +144,11 @@ a:hover {
     color: var(--color-base2);
 }
 
+.github-link .fa {
+    transition: all 0.4s ease;
+    font-size: 36px;
+}
+
 .link-custom::after {
     content: "";
     width: 0%;
@@ -157,6 +162,10 @@ a:hover {
 
 .link-custom:hover::after {
     width: 100%;
+}
+
+.github-link .fa:hover {
+    color: var(--color-brand3);
 }
 
 .text-brand {
