@@ -76,7 +76,14 @@ a:hover {
     font-size: 1em;
     font-weight: 700;
     color: var(--color-brand3);
-    animation: blink 0.5s linear infinite;
+    animation: blink 0.8s linear infinite;
+}
+
+.my-projects span, .my-blog span {
+    font-size: 1em;
+    font-weight: 700;
+    color: var(--color-brand3);
+    animation: blink 0.8s linear infinite;
 }
 
 @keyframes blink {
@@ -185,5 +192,11 @@ a:hover {
     max-height: 100px; 
     overflow-y: auto; 
 }
+
+.blog-description-wrapper {
+    max-height: 100px;
+    overflow-y: hidden;
+}
+
 
 
