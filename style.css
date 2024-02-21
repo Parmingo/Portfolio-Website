@@ -176,4 +176,14 @@ a:hover {
     color: var(--color-brand3);
 }
 
+.card-custom .tech-stack {
+    font-style: italic;
+    font-size: 0.9em;
+}
+
+.portfolio-description-wrapper {
+    max-height: 100px; 
+    overflow-y: auto; 
+}
+
 
