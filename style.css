@@ -72,6 +72,25 @@ a:hover {
     font-weight: 300;
 }
 
+.homepage-landing-text span {
+    font-size: 1em;
+    font-weight: 700;
+    color: var(--color-brand3);
+    animation: blink 0.5s linear infinite;
+}
+
+@keyframes blink {
+    25% {
+        opacity: 0.5;
+    }
+    50% {
+        opacity: 0;
+    }
+    75% {
+        opacity: 0.5;
+    }
+}
+
 .homepage-landing-text .fa {
     transition: all 0.4s ease;
     font-size: 36px;
@@ -80,7 +99,7 @@ a:hover {
 }
 
 .homepage-landing-text .fa:hover {
-    color: rgb(0, 200, 52, 0.5);;
+    color: rgb(0, 200, 52, 0.5);
 }
 
 
