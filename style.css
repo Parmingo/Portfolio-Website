@@ -190,11 +190,13 @@ a:hover {
 
 .portfolio-description-wrapper {
     max-height: 100px; 
+    min-height: 100px;
     overflow-y: auto; 
 }
 
 .blog-description-wrapper {
     max-height: 100px;
+    min-height: 100px;
     overflow-y: hidden;
 }
 
