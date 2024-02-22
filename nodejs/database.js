@@ -7,7 +7,7 @@ const app = express();
 const readLine = require("readline");
 
 
-app.use(express.static(path.join(__dirname, '..', '..', 'public')));
+app.use(express.static(path.join(__dirname, 'public')));
 
 
 // Setting up readline interface
