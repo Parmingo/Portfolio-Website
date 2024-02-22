@@ -192,12 +192,36 @@ a:hover {
     max-height: 100px; 
     min-height: 100px;
     overflow-y: auto; 
+    padding-right: 1rem; /* Adds space on the right of the text */
+    margin-right: -1rem;
+}
+
+.portfolio-description {
+    text-align: justify;
 }
 
 .blog-description-wrapper {
     max-height: 100px;
     min-height: 100px;
     overflow-y: hidden;
+}
+
+/* Style the scrollbar for Chrome, Safari and Opera */
+::-webkit-scrollbar {
+    width: 5px; 
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: lightslategray;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555; 
 }
 
 

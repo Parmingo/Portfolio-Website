@@ -3,12 +3,19 @@ const mysql = require('mysql2');
 const express = require('express');
 const cors = require('cors');
 const path = require('path');
+const http = require('http'); 
+const WebSocket = require('ws'); 
 const app = express();
 const readLine = require("readline");
 
 
 app.use(express.static(path.join(__dirname, 'public')));
 
+app.use(cors({
+    origin: '*', 
+    methods: ['GET', 'POST'], // Allow only GET and POST HTTP methods
+    allowedHeaders: ['Content-Type', 'Authorization'], 
+  }));
 
 // Setting up readline interface
 const rl = readLine.createInterface({
@@ -28,12 +35,6 @@ connection.connect(error => {
     console.log('Connected to PlanetScale!');
 });
 
-app.use(cors({
-    origin: '*', // Allow only this origin to access the resources
-    methods: ['GET', 'POST'], // Allow only GET and POST HTTP methods
-    allowedHeaders: ['Content-Type', 'Authorization'], // Allow only these headers
-  }));
-
 // Route for displaying JSON data from the Projects table
 app.get('/api/projects', (req, res) => {
     connection.query('SELECT * FROM Projects', (error, results) => {
@@ -46,25 +47,36 @@ app.get('/api/projects', (req, res) => {
     });
 });
 
-  
+// Create HTTP server from express app
+const server = http.createServer(app);
 
-// Another route, e.g., '/welcome'
-app.get('/welcome', (req, res) => {
-    res.send('Welcome to my portfolio API');
+// Attach WebSocket server to the same HTTP server
+const wss = new WebSocket.Server({ server });
+
+wss.on('connection', function connection(ws) {
+    ws.on('message', function incoming(message) {
+        console.log('received: %s', message);
+    });
+
+    // Send a JSON-formatted message
+    ws.send(JSON.stringify({ message: 'Connected to WebSocket server' }));
 });
 
 // Listen on the specified port
 const port = process.env.PORT || 3000;
-app.listen(port, () => {
+server.listen(port, () => {
     console.log(`Server running on http://localhost:${port}`);
-
-    // This is to end connection for testing purposes
+    // readline interface setup
+    const rl = readLine.createInterface({
+        input: process.stdin,
+        output: process.stdout
+    });
     console.log('Enter Q to end connection');
     rl.on('line', (input) => {
         if(input.toUpperCase() === 'Q') {
-          console.log('Ending connection and exiting...');
-          process.exit(0); 
+            console.log('Ending connection and exiting...');
+            process.exit(0);
         }
-      });
+    });
 });
 
