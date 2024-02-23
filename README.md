@@ -22,6 +22,6 @@ I have listed the technical skills and programs used when creating this website:
 
 These are the future planned updates I have for the website:
 
-- Utilizing **Jekyll** for blog posts so PDF does not have to be attached everytime for a new blog post.
+- Utilizing **Jekyll** for blog posts so PDF does not have to be attached everytime for a new blog post **OR** utilizing Node.js again to create an HTML page everytime for a new blog post. This may not be the best method, therefore, I will look into Angular and see what I can do.
 - **Login system** which will allow me to login and create posts directly from the website.
 
