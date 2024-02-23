@@ -41,12 +41,16 @@ function fetchAndDisplayProjects() {
 }
 
 /**
- * Creates HTML elements for each project and inserts them into the DOM.
+ * Creates HTML elements for each project, sorted by projectID, and inserts them into the DOM.
  * @param {Object[]} projects -- an array of projects to display
  */
 function displayProjects(projects) {
     const container = document.getElementById('projects-container');
     container.innerHTML = '';
+    
+    // Sort projects by projectID
+    projects.sort((a, b) => a.projectID - b.projectID);
+
     projects.forEach(project => {
         const projectElement = `
             <div class="col-md-6" data-aos="fade-up" data-aos-delay="300">

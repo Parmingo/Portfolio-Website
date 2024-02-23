@@ -47,6 +47,18 @@ app.get('/api/projects', (req, res) => {
     });
 });
 
+// Route for displaying JSON data from BlogPosts table
+app.get('/api/posts', (req, res) => {
+    connection.query('SELECT * FROM BlogPosts', (error, results) => {
+        if (error) {
+            console.error('Query ERROR:', error);
+            res.status(500).json({ error: 'Database QUERY ERROR', details: error.message });
+            return;
+        }
+        res.json(results);
+    });
+});
+
 // Create HTTP server from express app
 const server = http.createServer(app);
 
