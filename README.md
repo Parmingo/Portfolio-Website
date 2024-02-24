@@ -4,7 +4,7 @@ Hello and welcome!
 
 You've landed on my Portfolio Website, a digital showcase of my projects and blog posts, all centered around the dynamic world of cyber security. While my academic journey in computer science has allowed me to explore a broad spectrum of technologies, this site reflects my passion for delving into new areas and expanding my technical horizons.
 
-The website is hosted at: 
+The website is hosted [here](portfolio-website-lu5y.onrender.com).
 
 ## Technology Used
 
@@ -17,6 +17,8 @@ I have listed the technical skills and programs used when creating this website:
 - **MySQL**: utilized to create a relational database management system to store, retrieve and manage data efficiently.
 - **PlanetScale**: an online website that allowed me to host the MySQL database for the database connection using Node.js.
 - **GitHub**: utilized for version control.
+- **Render**: deployed as the hosting platform for the website as it offered automated deployments directly from the GitHub repository.
+- **Google Domains**: used for the custom domain as it provides reliable DNS management and domain privacy features.
 
 ## Future Plans
 
