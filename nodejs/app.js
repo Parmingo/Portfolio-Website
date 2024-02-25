@@ -59,6 +59,12 @@ app.get('/api/posts', (req, res) => {
     });
 });
 
+// health checking for render
+app.get('/health', (req, res) => {
+    res.status(200).send('OK');
+  });
+  
+
 // Create HTTP server from express app
 const server = http.createServer(app);
 
