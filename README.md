@@ -4,7 +4,7 @@ Hello and welcome!
 
 You've landed on my Portfolio Website, a digital showcase of my projects and blog posts, all centered around the dynamic world of cyber security. While my academic journey in computer science has allowed me to explore a broad spectrum of technologies, this site reflects my passion for delving into new areas and expanding my technical horizons.
 
-The website is hosted [here](portfolio-website-lu5y.onrender.com).
+The website is hosted [here](https://www.parmingo.com).
 
 ## Technology Used
 
