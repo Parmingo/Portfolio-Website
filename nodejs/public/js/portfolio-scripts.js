@@ -17,7 +17,7 @@ window.onload = function() {
     typeWriter();
     initializeWebSocket();
 };
-
+  
 
 /**
  * Fetches project data from the server-side API and displays it on the page.
