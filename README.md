@@ -11,7 +11,7 @@ The website is hosted [here](https://www.parmingo.com).
 I have listed the technical skills and programs used when creating this website:
 
 - **HTML / CSS**: the foundational building blocks for layout and applying styles.
-- **BootStrap**: utilized for responsiveness of the website.
+- **Bootstrap**: utilized for responsiveness of the website.
 - **JavaScript**: utilized for features such as the type writer and the truncation of blog posts.
 - **Node.js**: utilized for server-side scripting to allow the website to handle requests, interact with the database, and deliver content dynamically.
 - **MySQL**: utilized to create a relational database management system to store, retrieve and manage data efficiently.
@@ -26,4 +26,12 @@ These are the future planned updates I have for the website:
 
 - Utilizing **Jekyll** for blog posts so PDF does not have to be attached everytime for a new blog post **OR** utilizing Node.js again to create an HTML page everytime for a new blog post. This may not be the best method, therefore, I will look into Angular and see what I can do.
 - **Login system** which will allow me to login and create posts directly from the website.
+
+## Acknowledgement
+
+PlanetScale: https://planetscale.com/ <br>
+Render: https://render.com/ <br>
+Google Domains: https://domains.google.com/ <br>
+Bootstrap: https://getbootstrap.com/
+
 
