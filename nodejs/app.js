@@ -3,25 +3,32 @@ const mysql = require('mysql2');
 const express = require('express');
 const cors = require('cors');
 const path = require('path');
+const apicache = require('apicache');
 const http = require('http'); 
 const WebSocket = require('ws'); 
+
 const app = express();
 const readLine = require("readline");
+let cache = apicache.middleware;
+
 
 
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(cors({
     origin: '*', 
-    methods: ['GET', 'POST'], // Allow only GET and POST HTTP methods
+    methods: ['GET', 'POST'],
     allowedHeaders: ['Content-Type', 'Authorization'], 
-  }));
+}));
+
+app.use(cache('5 minutes'));
 
 // Setting up readline interface
 const rl = readLine.createInterface({
     input: process.stdin,
     output: process.stdout
-  });
+});
+
 
 // Creating a MySQL connection using the connection string
 const connection = mysql.createConnection(process.env.DATABASE_URL);
